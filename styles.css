@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fdf6e3;
+    color: #6b4f4f;
+    margin: 0;
+    padding: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #f5d9d3;
+    padding: 10px 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #6b4f4f;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+nav a.active {
+    color: #8c5648;
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+.project-card {
+    display: inline-block;
+    margin: 20px;
+    padding: 15px;
+    background-color: #f5e3e1;
+    border-radius: 10px;
+    width: 200px;
+}
+
+.project-card img {
+    width: 100%;
+    border-radius: 10px;
+}

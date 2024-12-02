@@ -3,29 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Projects</title>
-    <link rel="stylesheet" href="assets/styles.css">
+    <title>Projects - Ramez Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="projects.html" class="active">Projects</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html" class="active">Projects</a>
+        <a href="contact.html">Contact</a>
+    </nav>
     <main>
-        <section class="projects-section">
-            <h2>Projects</h2>
-            <div class="project">
-                <img src="assets/project-images/project1.jpg" alt="Project 1">
+        <section class="projects">
+            <h2>My Projects</h2>
+            <div class="project-card">
+                <img src="project1.png" alt="Productivity Kit App">
                 <h3>Productivity Kit App</h3>
-                <p>Coding project using Flutter. Available on Google Play.</p>
-                <a href="#" class="button">Visit</a>
+                <p>Built using Flutter, available on Google Play.</p>
+                <a href="#">Visit</a>
             </div>
-            <!-- Repeat for other projects -->
+            <div class="project-card">
+                <img src="project2.png" alt="Masbaha App">
+                <h3>Masbaha App</h3>
+                <p>A Flutter-based app on Google Play.</p>
+                <a href="#">Visit</a>
+            </div>
+            <div class="project-card">
+                <img src="project3.png" alt="Discover Aseer">
+                <h3>Discover Aseer</h3>
+                <p>A Flutter app developed for a client.</p>
+                <a href="#">Visit</a>
+            </div>
         </section>
     </main>
+    <script src="script.js"></script>
 </body>
 </html>
