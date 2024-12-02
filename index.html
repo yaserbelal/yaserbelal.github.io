@@ -59,5 +59,21 @@
     <footer>
         <p>&copy; 2024 Yasser Belal Salah. All Rights Reserved.</p>
     </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const animatedElements = document.querySelectorAll('.container');
+
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            animatedElements.forEach(element => observer.observe(element));
+        });
+    </script>
 </body>
 </html>

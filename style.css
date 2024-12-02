@@ -1,19 +1,32 @@
+/* General Body Styling */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f7f4eb;
     color: #5b4b49;
+    animation: fadeIn 1s ease-in-out; /* Fade-in effect */
 }
 
+/* Header and Footer Styling */
 header, footer {
     background-color: #d6c8b8;
     padding: 20px;
     text-align: center;
+    animation: slideDown 1s ease-in-out; /* Slide-in effect for header/footer */
 }
 
 header h1, footer p {
     margin: 0;
+}
+
+/* Navigation Links Styling */
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #f3e6d5;
+    padding: 10px 0;
+    animation: slideIn 1.5s ease-in-out;
 }
 
 nav a {
@@ -21,14 +34,84 @@ nav a {
     text-decoration: none;
     color: #5b4b49;
     font-weight: bold;
+    position: relative;
+    transition: color 0.3s ease;
 }
 
+/* Hover Animation for Links */
+nav a:hover {
+    color: #d65a31;
+    transform: scale(1.1); /* Grow slightly on hover */
+}
+
+/* Animations for Content Sections */
 .container {
     padding: 20px;
     max-width: 900px;
     margin: auto;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 1s ease-out forwards;
 }
 
+/* Footer Styling */
 footer {
     margin-top: 50px;
+}
+
+/* Keyframes for Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+button {
+    padding: 10px 20px;
+    background-color: #5b4b49;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.1); /* Slightly grow the button */
+    background-color: #d65a31; /* Change the background color */
 }
