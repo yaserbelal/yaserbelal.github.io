@@ -3,52 +3,58 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f7f4eb;
-    color: #5b4b49;
-    animation: fadeIn 1s ease-in-out; /* Fade-in effect */
+    background: linear-gradient(to bottom, #87CEEB, #4682B4); /* Sky to Ocean Gradient */
+    color: #ffffff;
+    animation: fadeIn 1s ease-in-out;
 }
 
 /* Header and Footer Styling */
 header, footer {
-    background-color: #d6c8b8;
+    background-color: #004e92; /* Deep Blue */
     padding: 20px;
     text-align: center;
-    animation: slideDown 1s ease-in-out; /* Slide-in effect for header/footer */
+    animation: slideDown 1s ease-in-out;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 header h1, footer p {
     margin: 0;
+    color: #ffffff;
 }
 
 /* Navigation Links Styling */
 nav {
     display: flex;
     justify-content: center;
-    background-color: #f3e6d5;
+    background-color: #005f99; /* Mid-Ocean Blue */
     padding: 10px 0;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
     animation: slideIn 1.5s ease-in-out;
 }
 
 nav a {
     margin: 0 15px;
     text-decoration: none;
-    color: #5b4b49;
+    color: #e0f7ff; /* Light Seafoam */
     font-weight: bold;
     position: relative;
     transition: color 0.3s ease;
 }
 
-/* Hover Animation for Links */
 nav a:hover {
-    color: #d65a31;
-    transform: scale(1.1); /* Grow slightly on hover */
+    color: #FFD700; /* Golden Sand Color */
+    transform: scale(1.1);
 }
 
-/* Animations for Content Sections */
+/* Content Sections */
 .container {
     padding: 20px;
     max-width: 900px;
     margin: auto;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
     opacity: 0;
     transform: translateY(50px);
     animation: fadeInUp 1s ease-out forwards;
@@ -59,7 +65,29 @@ footer {
     margin-top: 50px;
 }
 
-/* Keyframes for Animations */
+footer .wave svg {
+    position: relative;
+    bottom: -10px;
+}
+
+/* Buttons */
+button {
+    padding: 10px 20px;
+    background-color: #005f99; /* Deep Blue */
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+    transform: scale(1.1);
+    background-color: #FFD700; /* Golden Sand */
+}
+
+/* Keyframes */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -101,4 +129,3 @@ footer {
         transform: translateY(0);
     }
 }
-

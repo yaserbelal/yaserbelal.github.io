@@ -4,39 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yasser Belal Salah - Portfolio</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f7f4eb;
-            color: #5b4b49;
-        }
-        header, footer {
-            background-color: #d6c8b8;
-            padding: 20px;
-            text-align: center;
-        }
-        header h1, footer p {
-            margin: 0;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: #f3e6d5;
-            padding: 10px 0;
-        }
-        nav a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: #5b4b49;
-            font-weight: bold;
-        }
-        .container {
-            padding: 50px;
-            text-align: center;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
@@ -54,26 +22,11 @@
     <div class="container">
         <h2>Hi, I'm Yasser Belal Salah</h2>
         <p>Computer Science Student | Competitive Programmer | Problem Solver</p>
+        <button onclick="alert('Thanks for visiting!')">Learn More</button>
     </div>
 
     <footer>
         <p>&copy; 2024 Yasser Belal Salah. All Rights Reserved.</p>
     </footer>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const animatedElements = document.querySelectorAll('.container');
-
-            const observer = new IntersectionObserver(entries => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.opacity = 1;
-                        entry.target.style.transform = 'translateY(0)';
-                    }
-                });
-            }, { threshold: 0.1 });
-
-            animatedElements.forEach(element => observer.observe(element));
-        });
-    </script>
 </body>
 </html>
