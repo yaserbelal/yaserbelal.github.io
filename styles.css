@@ -1,80 +1,83 @@
+/* General Reset */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
+    background: #eaeff3;
     color: #333;
-    background: #f0f8ff;
 }
 
 header {
-    background: linear-gradient(90deg, #007acc, #00c6ff);
+    background: linear-gradient(90deg, #004aad, #007eff);
     color: white;
-    text-align: center;
     padding: 20px 0;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 header img {
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
     border: 5px solid white;
-    margin-bottom: 15px;
 }
 
 header h1 {
-    margin: 0;
-    font-size: 2.5em;
+    margin: 10px 0 5px;
+    font-size: 2.2em;
+    font-weight: bold;
 }
 
 header p {
-    margin: 5px 0;
+    margin: 0;
+    font-size: 1em;
 }
 
 nav {
-    text-align: center;
-    background: #333;
+    display: flex;
+    justify-content: center;
+    background: #003580;
     padding: 10px 0;
 }
 
 nav a {
-    color: white;
     text-decoration: none;
-    margin: 0 15px;
-    padding: 5px 10px;
+    color: white;
+    padding: 8px 15px;
+    margin: 0 5px;
     border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
-nav a.active, nav a:hover {
-    background: #00c6ff;
+nav a:hover,
+nav a.active {
+    background: #007eff;
 }
 
 main {
-    padding: 20px;
-}
-
-main h2 {
-    color: #007acc;
-}
-
-main ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-main ul li {
-    padding: 5px 0;
+    padding: 30px;
+    text-align: left;
+    max-width: 900px;
+    margin: auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 footer {
-    text-align: center;
-    background: #333;
+    background: #003580;
     color: white;
-    padding: 10px 0;
-    margin-top: 20px;
+    text-align: center;
+    padding: 15px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
 footer a {
-    color: #00c6ff;
-    text-decoration: none;
+    color: #fff;
+    text-decoration: underline;
+    font-weight: bold;
 }
