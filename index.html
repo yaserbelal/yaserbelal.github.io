@@ -3,31 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yasser Belal - CV</title>
+    <title>Yaser Belal</title>
     <style>
+        /* General Styles */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            line-height: 1.6;
             color: #333;
+            background: #f0f8ff;
         }
         header {
-            background: #007acc;
-            color: #fff;
-            padding: 20px 0;
+            background: linear-gradient(90deg, #007acc, #00c6ff);
+            color: white;
             text-align: center;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
         header h1 {
             margin: 0;
+            font-size: 2.5em;
+            animation: fadeIn 2s ease-in-out;
+        }
+        header p {
+            margin: 5px 0;
         }
         section {
             padding: 20px;
             max-width: 800px;
             margin: auto;
+            background: white;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+        section:hover {
+            transform: translateY(-10px);
         }
         h2 {
             color: #007acc;
+            border-bottom: 2px solid #007acc;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
         }
         ul {
             list-style: none;
@@ -36,18 +54,40 @@
         ul li {
             margin-bottom: 10px;
         }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: #007acc;
+            color: white;
+        }
+        footer a {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        /* Keyframes for Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
     </style>
 </head>
 <body>
     <header>
         <h1>Yasser Belal Salah</h1>
         <p>Computer Science Student</p>
-        <p>Email: <a href="mailto:yasserbelal2005@gmail.com">yasserbelal2005@gmail.com</a> | Phone: 01028427473</p>
+        <p>
+            <a href="mailto:yasserbelal2005@gmail.com" style="color: white; text-decoration: underline;">Email</a> | 
+            Phone: 01028427473
+        </p>
         <p>Location: Fauqos, Al Sharkia, Egypt</p>
     </header>
     <section>
         <h2>Summary</h2>
-        <p>I'm a computer science student and competitive programmer with a passion for learning and experiencing new things...</p>
+        <p>
+            I'm a computer science student and competitive programmer with a passion for learning and experiencing new
+            things. Detail-oriented, organized, and meticulous, ready to contribute to success.
+        </p>
     </section>
     <section>
         <h2>Education</h2>
@@ -59,7 +99,7 @@
     <section>
         <h2>Work Experience</h2>
         <ul>
-            <li><strong>Head of Research</strong> at A_ONE (05/2024 – present)</li>
+            <li><strong>Head of Research</strong>, A_ONE (05/2024 – present)</li>
         </ul>
     </section>
     <section>
@@ -80,5 +120,8 @@
             <li>German</li>
         </ul>
     </section>
+    <footer>
+        <p>Connect with me on <a href="https://linkedin.com/in/yasser-belal-0b860a2bb" target="_blank">LinkedIn</a></p>
+    </footer>
 </body>
 </html>
