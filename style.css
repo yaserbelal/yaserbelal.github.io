@@ -1,92 +1,4 @@
-/* General Body Styling */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(to bottom, #87CEEB, #4682B4); /* Sky to Ocean Gradient */
-    color: #ffffff;
-    animation: fadeIn 1s ease-in-out;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-}
-
-/* Header and Footer Styling */
-header, footer {
-    background-color: #004e92; /* Deep Blue */
-    padding: 20px;
-    text-align: center;
-    animation: slideDown 1s ease-in-out;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
-}
-
-header h1, footer p {
-    margin: 0;
-    color: #ffffff;
-    font-size: 1.5rem; /* Slightly larger text for better visibility */
-}
-
-/* Navigation Links Styling */
-nav {
-    display: flex;
-    justify-content: center;
-    background-color: #005f99; /* Mid-Ocean Blue */
-    padding: 10px 0;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
-    animation: slideIn 1.5s ease-in-out;
-    z-index: 10; /* Ensure nav stays on top */
-    position: sticky; /* Makes the nav bar sticky */
-    top: 0;
-}
-
-nav a {
-    margin: 0 15px;
-    text-decoration: none;
-    color: #e0f7ff; /* Light Seafoam */
-    font-weight: bold;
-    position: relative;
-    font-size: 1rem;
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-
-nav a:hover {
-    color: #FFD700; /* Golden Sand Color */
-    transform: scale(1.1);
-}
-
-/* Content Sections */
-.container {
-    padding: 20px;
-    max-width: 900px;
-    margin: auto;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    backdrop-filter: blur(10px);
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
-    opacity: 0;
-    transform: translateY(50px);
-    animation: fadeInUp 1s ease-out forwards;
-    margin-top: 30px; /* Add space from navigation bar */
-}
-
-/* Footer Styling */
-footer {
-    margin-top: 50px;
-}
-
-footer .wave svg {
-    position: relative;
-    bottom: -10px;
-}
-
-/* Buttons Styling */
-/* General Container Styling */
-.contact-container {
-    text-align: center;
-    margin: 50px auto;
-    max-width: 600px;
-    padding: 20px;
-}
-
-/* Button Grid Styling */
+/* General Button Container Styling */
 .contact-buttons {
     display: flex;
     flex-wrap: wrap;
@@ -95,87 +7,51 @@ footer .wave svg {
     margin: 20px auto;
 }
 
-/* Button Styling */
+/* Individual Button Styling */
 .contact-button {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 10px;
-    width: 240px; /* Width of each button */
-    height: 60px; /* Height of each button */
-    background-color: #fdf4e3; /* Beige background */
-    color: #7d5a50; /* Soft brown text color */
+    width: 260px; /* Slightly wider buttons */
+    height: 60px; /* Fixed height for consistency */
+    background-color: #fef8e7; /* Light beige background */
+    color: #7d5a50; /* Soft brown text */
     text-decoration: none;
-    font-size: 1.1rem;
+    font-size: 1.2rem; /* Slightly larger font size */
     font-weight: bold;
-    border-radius: 15px; /* Rounded corners */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15); /* Soft shadow */
-    border: none;
-    padding: 10px;
-    transition: all 0.3s ease;
+    border-radius: 12px; /* Softer round corners */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+    padding: 10px 15px; /* Inner spacing */
+    transition: all 0.3s ease; /* Smooth hover transition */
+    border: 2px solid transparent; /* Default border */
 }
 
 /* Hover Effect */
 .contact-button:hover {
-    background-color: #fae7cc; /* Slightly darker beige */
-    transform: scale(1.05); /* Slight scaling effect */
-    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+    background-color: #fae5d3; /* Slightly darker beige on hover */
+    transform: translateY(-3px); /* Lift effect */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+    border: 2px solid #7d5a50; /* Highlight border */
 }
 
-/* Icon Styling */
+/* Button Icon Styling */
 .contact-button img {
-    width: 28px;
-    height: 28px;
+    width: 30px; /* Larger icons */
+    height: 30px;
 }
 
-/* Add responsiveness for smaller screens */
+/* Arrow Styling */
+.contact-button .arrow {
+    font-size: 1.5rem; /* Larger arrow */
+    color: #7d5a50; /* Match button text color */
+    margin-left: auto; /* Push to the right */
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
     .contact-button {
         width: 100%; /* Buttons take full width */
         justify-content: center;
-        gap: 15px;
-    }
-}
-
-/* Keyframes */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes slideDown {
-    from {
-        transform: translateY(-50px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-@keyframes slideIn {
-    from {
-        transform: translateX(-100%);
-        opacity: 0;
-    }
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
     }
 }
