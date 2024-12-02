@@ -60,6 +60,40 @@ nav a:hover {
     animation: fadeInUp 1s ease-out forwards;
 }
 
+.container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Contact Buttons Styling */
+.contact-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.btn {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffffff;
+    background: #005f99; /* Button Background */
+    transition: transform 0.3s, background-color 0.3s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.btn:hover {
+    transform: translateY(-5px);
+    background-color: #FFD700; /* Hover Effect */
+}
+
 /* Footer Styling */
 footer {
     margin-top: 50px;
@@ -70,21 +104,9 @@ footer .wave svg {
     bottom: -10px;
 }
 
-/* Buttons */
-button {
-    padding: 10px 20px;
-    background-color: #005f99; /* Deep Blue */
-    color: #ffffff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
-}
-
-button:hover {
-    transform: scale(1.1);
-    background-color: #FFD700; /* Golden Sand */
+/* Buttons Icons Styling */
+.icon {
+    font-size: 1.5rem;
 }
 
 /* Keyframes */
