@@ -3,30 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Yasser Belal</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Yasser Belal - Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f4eb;
+            color: #5b4b49;
+        }
+        header, footer {
+            background-color: #d6c8b8;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1, footer p {
+            margin: 0;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #f3e6d5;
+            padding: 10px 0;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #5b4b49;
+            font-weight: bold;
+        }
+        .container {
+            padding: 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 15px 0;
+            padding: 20px;
+        }
+        .card img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .contact-link {
+            display: flex;
+            justify-content: space-between;
+            max-width: 500px;
+            margin: 15px auto;
+            padding: 15px;
+            background-color: #f7f4eb;
+            border: 1px solid #d6c8b8;
+            border-radius: 10px;
+            text-decoration: none;
+            color: #5b4b49;
+        }
+        .contact-link:hover {
+            background-color: #e5d5c3;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <img src="me.jpg" alt="Yasser Belal">
         <h1>Yasser Belal Salah</h1>
-        <p>Computer Science Student</p>
-        <p>Email: <a href="mailto:yasserbelal2005@gmail.com">yasserbelal2005@gmail.com</a> | Phone: 01028427473</p>
+        <p>Computer Science Student | Passionate Programmer</p>
     </header>
+
     <nav>
-        <a href="index.html" class="active">Home</a>
-        <a href="summary.html">Summary</a>
-        <a href="education.html">Education</a>
-        <a href="work.html">Work</a>
-        <a href="skills.html">Skills</a>
-        <a href="languages.html">Languages</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
     </nav>
-    <main>
-        <h2>Welcome!</h2>
-        <p>This is the homepage of Yasser Belal's CV. Use the navigation bar to explore more about me.</p>
-    </main>
+
+    <div class="container" id="about">
+        <h2 class="section-title">About Me</h2>
+        <div class="card">
+            <p>I am Yasser Belal Salah, a computer science student at Zagazig University. I am a competitive and creative programmer with a passion for learning and problem-solving. Detail-oriented, organized, and enthusiastic about achieving development objectives under tight deadlines while producing high-quality code.</p>
+            <p><strong>Education:</strong></p>
+            <ul>
+                <li>Bachelor of Computer Science, Zagazig University (2023–2027)</li>
+                <li>Fauqos Military High School (Grade: 82.9%)</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container" id="projects">
+        <h2 class="section-title">Projects</h2>
+        <div class="card">
+            <h3>Productivity Kit App</h3>
+            <p>A Flutter-based mobile app available on Google Play for organizing tasks and enhancing productivity.</p>
+        </div>
+        <div class="card">
+            <h3>Masbaha App</h3>
+            <p>A digital prayer app built with Flutter and published on Google Play.</p>
+        </div>
+        <div class="card">
+            <h3>Discover Aseer App</h3>
+            <p>An app designed as a freelance project for exploring cultural and touristic landmarks.</p>
+        </div>
+        <div class="card">
+            <h3>Some Silly Games</h3>
+            <p>Games developed using Unity to explore game development and logic design.</p>
+        </div>
+    </div>
+
+    <div class="container" id="contact">
+        <h2 class="section-title">Contact Me</h2>
+        <a href="mailto:yasserbelal2005@gmail.com" class="contact-link">📧 Gmail</a>
+        <a href="https://github.com/yasserbelal" class="contact-link">🐙 GitHub</a>
+        <a href="https://linkedin.com/in/yasser-belal-0b860a2bb" class="contact-link">🔗 LinkedIn</a>
+        <a href="https://facebook.com" class="contact-link">📘 Facebook</a>
+    </div>
+
     <footer>
-        <p>Connect on <a href="https://linkedin.com/in/yasser-belal-0b860a2bb" target="_blank">LinkedIn</a></p>
+        <p>&copy; 2024 Yasser Belal Salah. All Rights Reserved.</p>
     </footer>
 </body>
 </html>
