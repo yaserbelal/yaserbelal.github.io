@@ -3,93 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yasser Belal - CV</title>
+    <title>Yasser Belal</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23ffffff%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22><path d=%22M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14 2 9.27l6.91-1.01L12 2z%22/></svg>">
     <style>
+        /* General Page Styles */
         body {
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            color: #333;
-            background: #f0f8ff;
+            background: #fdf4e3; /* Soft beige background */
+            color: #5c3d2e; /* Soft brown text */
         }
         header {
-            background: linear-gradient(90deg, #007acc, #00c6ff);
-            color: white;
-            text-align: center;
-            padding: 20px 0;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
         }
-        header img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            border: 5px solid white;
-            margin-bottom: 15px;
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 1.2em;
+            color: #5c3d2e;
+            transition: color 0.3s ease;
         }
-        header h1 {
+        nav a:hover {
+            color: #8c6d53;
+        }
+        .main-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            height: 90vh;
+            text-align: left;
+            padding: 0 50px;
+        }
+        .info {
+            max-width: 40%;
+        }
+        .info h1 {
+            font-size: 4em;
             margin: 0;
-            font-size: 2.5em;
-            animation: fadeIn 2s ease-in-out;
+            font-weight: bold;
         }
-        header p {
-            margin: 5px 0;
+        .info p {
+            font-size: 1.2em;
+            margin-top: 10px;
+            line-height: 1.6;
         }
-        /* Additional styles here */
+        .planet {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, #f4e3d7 30%, #d2bba8);
+            border-radius: 50%;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .ring {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 400px;
+            height: 150px;
+            background: linear-gradient(90deg, #d4b7a1, #f3d7c3);
+            transform: translate(-50%, -50%) rotate(-30deg);
+            border-radius: 50%;
+            box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+            z-index: -1;
+        }
     </style>
 </head>
 <body>
     <header>
-        <!-- Add the profile picture -->
-        <img src="me.jpg" alt="Yasser Belal">
-        <h1>Yasser Belal Salah</h1>
-        <p>Computer Science Student</p>
-        <p>
-            <a href="mailto:yasserbelal2005@gmail.com" style="color: white; text-decoration: underline;">Email</a> | 
-            Phone: 01028427473
-        </p>
-        <p>Location: Fauqos, Al Sharkia, Egypt</p>
+        <h1>Yasser Belal</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
     </header>
-    <section>
-        <h2>Summary</h2>
-        <p>
-            I'm a computer science student and competitive programmer with a passion for learning and experiencing new
-            things. Detail-oriented, organized, and meticulous, ready to contribute to success.
-        </p>
-    </section>
-    <section>
-        <h2>Education</h2>
-        <ul>
-            <li><strong>Bachelor of Computer Science</strong>, Zagazig University (10/2023 – 07/2027)</li>
-            <li><strong>Fauqos Military High School</strong> (09/2022 – 08/2023) - Grade: 82.9%</li>
-        </ul>
-    </section>
-    <section>
-        <h2>Work Experience</h2>
-        <ul>
-            <li><strong>Head of Research</strong>, A_ONE (05/2024 – present)</li>
-        </ul>
-    </section>
-    <section>
-        <h2>Skills</h2>
-        <ul>
-            <li>Programming (C++, HTML 5)</li>
-            <li>Problem Solving</li>
-            <li>Team Work</li>
-            <li>Speed Typing</li>
-            <li>Microsoft Office 365</li>
-        </ul>
-    </section>
-    <section>
-        <h2>Languages</h2>
-        <ul>
-            <li>Arabic</li>
-            <li>English</li>
-            <li>German</li>
-        </ul>
-    </section>
-    <footer>
-        <p>Connect with me on <a href="https://linkedin.com/in/yasser-belal-0b860a2bb" target="_blank">LinkedIn</a></p>
-    </footer>
+    <div class="main-content">
+        <div class="info">
+            <h1>Yasser Belal Salah</h1>
+            <p>- Competitive Programmer</p>
+            <p>
+                I am a Computer Science student passionate about programming and solving challenges through code.
+            </p>
+        </div>
+        <div class="planet">
+            <div class="ring"></div>
+        </div>
+    </div>
 </body>
 </html>
