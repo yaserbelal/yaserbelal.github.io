@@ -101,17 +101,4 @@ footer {
         transform: translateY(0);
     }
 }
-button {
-    padding: 10px 20px;
-    background-color: #5b4b49;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-}
 
-button:hover {
-    transform: scale(1.1); /* Slightly grow the button */
-    background-color: #d65a31; /* Change the background color */
-}
