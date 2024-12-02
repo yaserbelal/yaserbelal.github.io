@@ -72,42 +72,56 @@ footer .wave svg {
 
 /* Buttons */
 /* Button Container Styling */
-.buttons {
+/* General Container Styling */
+.contact-container {
+    text-align: center;
+    margin: 50px auto;
+    max-width: 600px;
+    padding: 20px;
+}
+
+/* Button Grid Styling */
+.contact-buttons {
     display: flex;
-    flex-wrap: wrap; /* Wrap to the next line for smaller screens */
+    flex-wrap: wrap;
     justify-content: center; /* Center all buttons */
     gap: 20px; /* Space between buttons */
     margin: 20px auto;
 }
 
-/* Individual Button Styling */
-.button {
+/* Button Styling */
+.contact-button {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     gap: 10px;
-    width: 200px; /* Adjust for consistent size */
-    height: 60px; /* Adjust for consistent size */
-    background-color: #fff7e6; /* Soft beige color */
-    color: #6f4e37; /* Warm brown text color */
+    width: 240px; /* Width of each button */
+    height: 60px; /* Height of each button */
+    background-color: #fdf4e3; /* Beige background */
+    color: #7d5a50; /* Soft brown text color */
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: bold;
     border-radius: 15px; /* Rounded corners */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Light shadow for depth */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15); /* Soft shadow */
     border: none;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    padding: 10px;
+    transition: all 0.3s ease;
 }
 
-.button:hover {
-    transform: translateY(-5px); /* Lift button on hover */
-    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
-    background-color: #fff0cc; /* Slightly lighter color on hover */
+/* Hover Effect */
+.contact-button:hover {
+    background-color: #fae7cc; /* Slightly darker beige */
+    transform: scale(1.05); /* Slight scaling effect */
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow */
 }
-.button img {
-    width: 24px; /* Adjust icon size */
-    height: 24px;
+
+/* Icon Styling */
+.contact-button img {
+    width: 28px;
+    height: 28px;
 }
+
 /* Keyframes */
 @keyframes fadeIn {
     from {
