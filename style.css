@@ -1,57 +1,47 @@
-/* General Button Container Styling */
-.contact-buttons {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* Center all buttons */
-    gap: 20px; /* Space between buttons */
-    margin: 20px auto;
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f9f9f9;
 }
 
-/* Individual Button Styling */
-.contact-button {
+header {
+    background: #007bff;
+    color: white;
+    padding: 20px 10px;
+    text-align: center;
+}
+
+.navbar {
+    list-style: none;
+    padding: 0;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 10px;
-    width: 260px; /* Slightly wider buttons */
-    height: 60px; /* Fixed height for consistency */
-    background-color: #fef8e7; /* Light beige background */
-    color: #7d5a50; /* Soft brown text */
+    justify-content: center;
+    margin: 0;
+    background-color: #0056b3;
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar a {
+    color: white;
     text-decoration: none;
-    font-size: 1.2rem; /* Slightly larger font size */
     font-weight: bold;
-    border-radius: 12px; /* Softer round corners */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
-    padding: 10px 15px; /* Inner spacing */
-    transition: all 0.3s ease; /* Smooth hover transition */
-    border: 2px solid transparent; /* Default border */
 }
 
-/* Hover Effect */
-.contact-button:hover {
-    background-color: #fae5d3; /* Slightly darker beige on hover */
-    transform: translateY(-3px); /* Lift effect */
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
-    border: 2px solid #7d5a50; /* Highlight border */
+.navbar a:hover {
+    text-decoration: underline;
 }
 
-/* Button Icon Styling */
-.contact-button img {
-    width: 30px; /* Larger icons */
-    height: 30px;
+h1 {
+    color: #007bff;
+    margin-bottom: 20px;
 }
 
-/* Arrow Styling */
-.contact-button .arrow {
-    font-size: 1.5rem; /* Larger arrow */
-    color: #7d5a50; /* Match button text color */
-    margin-left: auto; /* Push to the right */
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .contact-button {
-        width: 100%; /* Buttons take full width */
-        justify-content: center;
-    }
+main {
+    padding: 20px;
+    text-align: center;
 }
