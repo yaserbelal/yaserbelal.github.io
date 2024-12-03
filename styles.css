@@ -153,20 +153,6 @@ header nav ul li a:hover {
     color: #ff6ec7;
 }
 
-/* Footer Styling */
-footer {
-    background: rgba(0, 0, 0, 0.9);
-    padding: 27px;
-    margin-top: 257px;
-    text-align: center;
-    border-top: 2px solid rgba(255, 255, 255, 0.1);
-}
-
-footer p {
-    font-size: 14px;
-    color: rgba(255, 255, 255, 0.7);
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
     .project-grid, .contact-grid {
