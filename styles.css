@@ -1,6 +1,6 @@
 /* General Reset */
 * {
-    margin: 0  ;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Arial', sans-serif;
@@ -32,19 +32,25 @@ header nav ul {
     list-style: none;
 }
 
+header nav ul {
+    display: flex;
+    list-style: none;
+}
+
 header nav ul li {
-    margin: 0 15px;
+    margin-left: 20px;
 }
 
 header nav ul li a {
-    color: white;
+    color: #2c304a;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 18px;
+    font-weight: bold;
     transition: color 0.3s;
 }
 
 header nav ul li a:hover {
-    color: #00c6ff;
+    color: #5d567c;
 }
 
 /* Section Styling */
@@ -58,7 +64,9 @@ header nav ul li a:hover {
     opacity: 1;
     transform: translateY(0);
 }
-.section h1, .section h2 {
+
+.section h1,
+.section h2 {
     margin-bottom: 20px;
     font-size: 2.5rem;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
@@ -174,7 +182,69 @@ footer p {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .project-grid, .contact-grid {
+
+    .project-grid,
+    .contact-grid {
         flex-direction: column;
+    }
+}
+
+/* Home Section */
+.home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    height: calc(100vh - 70px);
+    /* Full height minus header */
+}
+
+.home .content {
+    text-align: left;
+}
+
+.home h1 {
+    font-size: 5rem;
+    font-weight: bold;
+    color: #7c567b;
+    margin-bottom: 10px;
+}
+
+.home p {
+    font-size: 1.5rem;
+    color: #a68fa1;
+}
+
+/* Planet Design */
+.planet img {
+    width: 300px;
+    height: auto;
+    animation: rotate 10s infinite linear;
+}
+
+/* Animation for Planet */
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .home {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .home .content {
+        margin-bottom: 20px;
+    }
+
+    .planet img {
+        width: 200px;
     }
 }
