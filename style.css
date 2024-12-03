@@ -1,29 +1,23 @@
-/* عام */
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
-    color: #ffffff; /* نص أبيض */
-    background-color: #001f3f; /* خلفية زرقاء داكنة */
-    line-height: 1.6;
+    font-family: Arial, sans-serif;
+    background-color: #fef5d4; /* لون بيج فاتح */
+    color: #4d3c3c;
+    text-align: center;
 }
 
 header {
-    background: #003f7f; /* أزرق متوسط */
-    color: white;
-    padding: 20px 10px;
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    background-color: #f3e5c0;
+    padding: 10px 0;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .navbar {
     list-style: none;
-    padding: 0;
-    margin: 0;
     display: flex;
     justify-content: center;
-    background-color: #005f9f; /* أزرق فاتح */
-    border-bottom: 2px solid #0077cc;
+    padding: 0;
+    margin: 0;
 }
 
 .navbar li {
@@ -31,67 +25,41 @@ header {
 }
 
 .navbar a {
-    color: white;
     text-decoration: none;
+    font-size: 1.2em;
+    color: #4d3c3c;
     font-weight: bold;
-    padding: 10px 15px;
-    border-radius: 5px;
-    transition: background 0.3s ease;
 }
 
-.navbar a:hover {
-    background-color: #003f7f; /* أزرق أغمق عند التمرير */
+.contact-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
 }
 
-/* النصوص والعناوين */
-h1, h2 {
-    color: #0077cc; /* أزرق ساطع */
-    margin-bottom: 15px;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-}
-
-p, ul {
-    color: #d0e7ff; /* أزرق فاتح للنص */
-}
-
-/* الروابط */
-a {
-    color: #1da1f2; /* أزرق تويتر */
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-    color: #0077cc;
-}
-
-/* المحتوى الرئيسي */
-main {
-    padding: 20px;
-    text-align: center;
-    background-color: #002f5f; /* خلفية أزرق أغمق */
+.card {
+    background: #fff2cc; /* لون فاتح */
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    margin: 20px auto;
-    max-width: 800px;
-}
-
-/* القوائم */
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-ul li {
-    margin: 10px 0;
-}
-
-/* الهوامش */
-footer {
+    padding: 20px;
+    width: 150px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
     text-align: center;
-    padding: 10px;
-    background: #005f9f;
-    color: white;
-    font-size: 0.9em;
-    border-top: 2px solid #0077cc;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.card i {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #826a5a;
+}
+
+.card p {
+    margin: 0;
+    font-weight: bold;
 }
