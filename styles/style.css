@@ -1,0 +1,130 @@
+/* Galaxy-inspired color palette */
+:root {
+    --galaxy-dark: #0B3D91; /* Deep blue */
+    --galaxy-purple: #4B0082; /* Indigo */
+    --galaxy-pink: #FF6EC7; /* Bright pink */
+    --galaxy-gold: #FFD700; /* Gold */
+    --galaxy-white: #FFFFFF; /* White */
+    --galaxy-black: #000000; /* Black */
+    --galaxy-gradient: linear-gradient(135deg, var(--galaxy-dark), var(--galaxy-purple));
+}
+
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: var(--galaxy-black);
+    color: var(--galaxy-white);
+}
+
+/* Header styles */
+header {
+    background: var(--galaxy-gradient);
+    color: var(--galaxy-white);
+    padding: 1rem 0;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    text-shadow: 0 0 10px var(--galaxy-pink), 0 0 20px var(--galaxy-pink);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: var(--galaxy-white);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--galaxy-pink);
+    text-shadow: 0 0 10px var(--galaxy-pink);
+}
+
+/* Section styles */
+section {
+    padding: 20px;
+    margin: 20px;
+    background: rgba(11, 61, 145, 0.1); /* Semi-transparent dark blue */
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 110, 199, 0.2);
+    border: 1px solid rgba(255, 110, 199, 0.1);
+}
+
+section h2 {
+    color: var(--galaxy-gold);
+    text-shadow: 0 0 10px var(--galaxy-gold);
+}
+
+section p, section ul {
+    color: var(--galaxy-white);
+}
+
+section ul li {
+    background: rgba(75, 0, 130, 0.2); /* Semi-transparent purple */
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 110, 199, 0.1);
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: var(--galaxy-gradient);
+    color: var(--galaxy-white);
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.5);
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Links */
+a {
+    color: var(--galaxy-pink);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--galaxy-gold);
+    text-shadow: 0 0 10px var(--galaxy-gold);
+}
+
+/* Buttons (if needed) */
+button {
+    background: var(--galaxy-gradient);
+    color: var(--galaxy-white);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: var(--galaxy-purple);
+    box-shadow: 0 0 10px var(--galaxy-pink);
+}
