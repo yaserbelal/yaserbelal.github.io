@@ -1,17 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yasser Belal Salah - Portfolio</title>
     <link rel="stylesheet" href="styles/style.css">
 </head>
-
 <body>
     <header>
-        <h1><a href="about.html">Yasser Belal Salah</a></h1>
-        <p>Computer Science Student | Problem Solver | IEEE ZSB CS Member</p>
+        <h1><a href="index.html" class="header-link">Yasser Belal Salah</a></h1>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -24,11 +21,21 @@
         </nav>
     </header>
 
-    <section class="summary">
-        <h2>Welcome to My Portfolio</h2>
-        <p>I'm a computer science student and competitive programmer with a passion for learning and solving complex
-            problems. Explore my portfolio to learn more about my skills, experience, and education.</p>
-    </section>
+    <main class="hero-section">
+        <!-- Left Half: Name and "Programmer" -->
+        <div class="hero-text">
+            <h2 class="hero-name">Yasser Belal Salah</h2>
+            <p class="hero-subtitle">Programmer</p>
+        </div>
+
+        <!-- Right Half: Galaxy Video -->
+        <div class="hero-video">
+            <video autoplay muted loop>
+                <source src="videos/galaxy.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </main>
 
     <footer>
         <p>&copy; 2023 Yasser Belal Salah</p>
@@ -36,5 +43,4 @@
 
     <script src="scripts/script.js"></script>
 </body>
-
 </html>

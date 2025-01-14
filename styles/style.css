@@ -107,6 +107,56 @@ nav ul li a:hover {
     text-shadow: 0 0 10px var(--galaxy-pink);
 }
 
+/* Hero Section */
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80vh; /* Adjust height as needed */
+    padding: 0 20px;
+    background: var(--galaxy-black);
+    position: relative;
+    z-index: 1; /* Ensure content is above stars */
+}
+
+/* Left Half: Text */
+.hero-text {
+    flex: 1;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.hero-name {
+    font-size: 4rem;
+    color: var(--galaxy-white);
+    text-shadow: 0 0 10px var(--galaxy-pink), 0 0 20px var(--galaxy-pink);
+    margin: 0;
+    animation: glow 2s infinite alternate;
+}
+
+.hero-subtitle {
+    font-size: 2rem;
+    color: var(--galaxy-gold);
+    text-shadow: 0 0 10px var(--galaxy-gold);
+    margin: 10px 0 0;
+}
+
+/* Right Half: Video */
+.hero-video {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+}
+
+.hero-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure video covers the entire area */
+    mask-image: linear-gradient(to right, transparent 0%, black 100%);
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 100%);
+}
+
 /* Section styles */
 section {
     padding: 20px;
@@ -177,7 +227,7 @@ a:hover {
     text-shadow: 0 0 10px var(--galaxy-gold);
 }
 
-/* Contact Buttons with Icons */
+/* Contact Buttons */
 .contact-buttons {
     display: flex;
     flex-wrap: wrap;
@@ -217,6 +267,7 @@ a:hover {
 .contact-button i {
     font-size: 1.2rem; /* Adjust icon size */
 }
+
 /* Star animations */
 @keyframes twinkle {
     0%, 100% {
@@ -275,6 +326,31 @@ a:hover {
     .contact-button {
         width: 100%;
         justify-content: center;
+    }
+
+    .hero-section {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+    }
+
+    .hero-text {
+        text-align: center;
+        padding-left: 0;
+        margin-bottom: 20px;
+    }
+
+    .hero-name {
+        font-size: 3rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.5rem;
+    }
+
+    .hero-video {
+        width: 100%;
+        height: 300px; /* Adjust height for mobile */
     }
 }
 
