@@ -177,7 +177,7 @@ a:hover {
     text-shadow: 0 0 10px var(--galaxy-gold);
 }
 
-/* Contact Buttons */
+/* Contact Buttons with Icons */
 .contact-buttons {
     display: flex;
     flex-wrap: wrap;
@@ -214,6 +214,9 @@ a:hover {
     box-shadow: 0 0 10px var(--galaxy-pink);
 }
 
+.contact-button i {
+    font-size: 1.2rem; /* Adjust icon size */
+}
 /* Star animations */
 @keyframes twinkle {
     0%, 100% {
