@@ -17,6 +17,7 @@ body {
     padding: 0;
     background: var(--galaxy-black);
     color: var(--galaxy-white);
+    overflow: hidden; /* Prevent scrollbars from moving stars */
 }
 
 /* Header styles */
@@ -26,12 +27,24 @@ header {
     padding: 1rem 0;
     text-align: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 2; /* Ensure header is above stars */
 }
 
 header h1 {
     margin: 0;
     font-size: 2.5rem;
     text-shadow: 0 0 10px var(--galaxy-pink), 0 0 20px var(--galaxy-pink);
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 10px var(--galaxy-pink), 0 0 20px var(--galaxy-pink);
+    }
+    100% {
+        text-shadow: 0 0 20px var(--galaxy-pink), 0 0 40px var(--galaxy-pink);
+    }
 }
 
 nav ul {
@@ -65,11 +78,14 @@ section {
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(255, 110, 199, 0.2);
     border: 1px solid rgba(255, 110, 199, 0.1);
+    position: relative;
+    z-index: 2; /* Ensure sections are above stars */
 }
 
 section h2 {
     color: var(--galaxy-gold);
     text-shadow: 0 0 10px var(--galaxy-gold);
+    animation: glow 2s infinite alternate;
 }
 
 section p, section ul {
@@ -94,6 +110,7 @@ footer {
     width: 100%;
     bottom: 0;
     box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.5);
+    z-index: 2; /* Ensure footer is above stars */
 }
 
 footer p {
@@ -113,18 +130,66 @@ a:hover {
     text-shadow: 0 0 10px var(--galaxy-gold);
 }
 
-/* Buttons (if needed) */
-button {
-    background: var(--galaxy-gradient);
-    color: var(--galaxy-white);
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s ease;
+/* Contact Buttons */
+.contact-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
 }
 
-button:hover {
+.contact-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: var(--galaxy-gradient);
+    color: var(--galaxy-white);
+    text-decoration: none;
+    border-radius: 5px;
+    border: 1px solid var(--galaxy-pink);
+    transition: all 0.3s ease;
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 0 0 10px rgba(255, 110, 199, 0.3);
+}
+
+.contact-button:hover {
     background: var(--galaxy-purple);
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px var(--galaxy-pink);
+    border-color: var(--galaxy-gold);
+}
+
+.contact-button:active {
+    transform: translateY(0);
     box-shadow: 0 0 10px var(--galaxy-pink);
+}
+
+/* Star animations */
+@keyframes twinkle {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+@keyframes moveStars {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-100vh);
+    }
+}
+
+/* Starry background */
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0 0 5px white, 0 0 10px white;
+    animation: twinkle 2s infinite, moveStars 10s linear infinite;
 }

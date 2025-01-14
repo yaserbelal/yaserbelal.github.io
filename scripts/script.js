@@ -1,21 +1,29 @@
-// Add a starry background effect
-document.body.style.background = `
-    radial-gradient(circle at 20% 20%, var(--galaxy-dark), var(--galaxy-black)),
-    radial-gradient(circle at 80% 80%, var(--galaxy-purple), var(--galaxy-black))
-`;
+// Create a starry background with moving stars
+const starContainer = document.createElement("div");
+starContainer.style.position = "fixed";
+starContainer.style.top = "0";
+starContainer.style.left = "0";
+starContainer.style.width = "100%";
+starContainer.style.height = "100%";
+starContainer.style.zIndex = "1"; // Ensure stars are behind content
+starContainer.style.overflow = "hidden";
+document.body.appendChild(starContainer);
 
-// Create a starry effect with random stars
-for (let i = 0; i < 100; i++) {
+// Function to create stars
+function createStar() {
     const star = document.createElement("div");
-    star.style.position = "absolute";
-    star.style.width = "2px";
-    star.style.height = "2px";
-    star.style.backgroundColor = "white";
-    star.style.borderRadius = "50%";
+    star.className = "star";
+    star.style.width = `${Math.random() * 3}px`;
+    star.style.height = star.style.width;
     star.style.left = `${Math.random() * 100}%`;
     star.style.top = `${Math.random() * 100}%`;
-    star.style.boxShadow = `0 0 5px white, 0 0 10px white`;
-    document.body.appendChild(star);
+    star.style.animationDuration = `${Math.random() * 2 + 1}s, ${Math.random() * 10 + 5}s`;
+    starContainer.appendChild(star);
+}
+
+// Create multiple stars
+for (let i = 0; i < 200; i++) {
+    createStar();
 }
 
 // Smooth scrolling for anchor links
