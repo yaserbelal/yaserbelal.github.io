@@ -1,3 +1,31 @@
+// Add smooth page transitions
+document.querySelectorAll('a').forEach(link => {
+    if (link.href && !link.hash) { // Exclude anchor links
+        link.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.body.classList.add('fade-out'); // Trigger fade-out animation
+            setTimeout(() => {
+                window.location.href = link.href; // Navigate after animation
+            }, 500); // Match the duration of the fade-out animation
+        });
+    }
+});
+
+// Reset fade-out class when the page loads
+window.addEventListener('load', () => {
+    document.body.classList.remove('fade-out');
+});
+
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
 // Create a starry background with moving stars
 const starContainer = document.createElement("div");
 starContainer.style.position = "fixed";
@@ -25,13 +53,3 @@ function createStar() {
 for (let i = 0; i < 200; i++) {
     createStar();
 }
-
-// Smooth scrolling for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-});

@@ -18,6 +18,30 @@ body {
     background: var(--galaxy-black);
     color: var(--galaxy-white);
     overflow-x: hidden; /* Prevent horizontal scroll */
+    animation: fadeIn 0.5s ease-in-out; /* Page fade-in animation */
+}
+
+/* Page transition animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+body.fade-out {
+    animation: fadeOut 0.5s ease-in-out;
 }
 
 /* Header styles */
@@ -36,6 +60,17 @@ header h1 {
     font-size: 2.5rem;
     text-shadow: 0 0 10px var(--galaxy-pink), 0 0 20px var(--galaxy-pink);
     animation: glow 2s infinite alternate;
+}
+
+.header-link {
+    color: var(--galaxy-white);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.header-link:hover {
+    color: var(--galaxy-pink);
+    text-shadow: 0 0 10px var(--galaxy-pink);
 }
 
 @keyframes glow {
