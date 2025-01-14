@@ -141,20 +141,21 @@ nav ul li a:hover {
     margin: 10px 0 0;
 }
 
-/* Right Half: Video */
-.hero-video {
+/* Right Half: GIF */
+.hero-gif {
     flex: 1;
     position: relative;
     overflow: hidden;
     height: 100%;
-    background: black; /* Set a black background for blending */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.hero-video video {
+.hero-gif img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensure video covers the entire area */
-    mix-blend-mode: screen; /* Remove green screen using blending */
+    object-fit: cover; /* Ensure the GIF covers the entire area */
 }
 
 /* Section styles */
