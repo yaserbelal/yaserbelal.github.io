@@ -17,7 +17,7 @@ body {
     padding: 0;
     background: var(--galaxy-black);
     color: var(--galaxy-white);
-    overflow: hidden; /* Prevent scrollbars from moving stars */
+    overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 /* Header styles */
@@ -51,10 +51,12 @@ nav ul {
     list-style: none;
     padding: 0;
     margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 nav ul li {
-    display: inline;
     margin: 0 15px;
 }
 
@@ -80,6 +82,16 @@ section {
     border: 1px solid rgba(255, 110, 199, 0.1);
     position: relative;
     z-index: 2; /* Ensure sections are above stars */
+    animation: float 5s infinite ease-in-out;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
 }
 
 section h2 {
@@ -136,10 +148,13 @@ a:hover {
     flex-wrap: wrap;
     gap: 10px;
     margin-top: 20px;
+    justify-content: center;
 }
 
 .contact-button {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
     padding: 10px 20px;
     background: var(--galaxy-gradient);
     color: var(--galaxy-white);
@@ -192,4 +207,54 @@ a:hover {
     border-radius: 50%;
     box-shadow: 0 0 5px white, 0 0 10px white;
     animation: twinkle 2s infinite, moveStars 10s linear infinite;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    section {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    .contact-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-button {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    section h2 {
+        font-size: 1.2rem;
+    }
+
+    section p, section ul {
+        font-size: 0.9rem;
+    }
+
+    .contact-button {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
 }
